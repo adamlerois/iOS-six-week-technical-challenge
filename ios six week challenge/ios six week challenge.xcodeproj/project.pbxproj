@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5478CE631C9326EC001FEE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478CE621C9326EC001FEE1F /* AppDelegate.swift */; };
+		5478CE651C9326EC001FEE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478CE641C9326EC001FEE1F /* ViewController.swift */; };
+		5478CE681C9326EC001FEE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5478CE661C9326EC001FEE1F /* Main.storyboard */; };
+		5478CE6A1C9326EC001FEE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5478CE691C9326EC001FEE1F /* Assets.xcassets */; };
+		5478CE6D1C9326EC001FEE1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5478CE6B1C9326EC001FEE1F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5478CE5F1C9326EC001FEE1F /* ios six week challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios six week challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5478CE621C9326EC001FEE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5478CE641C9326EC001FEE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5478CE671C9326EC001FEE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5478CE691C9326EC001FEE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5478CE6C1C9326EC001FEE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5478CE6E1C9326EC001FEE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5478CE5C1C9326EC001FEE1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5478CE561C9326EC001FEE1F = {
+			isa = PBXGroup;
+			children = (
+				5478CE611C9326EC001FEE1F /* ios six week challenge */,
+				5478CE601C9326EC001FEE1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5478CE601C9326EC001FEE1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5478CE5F1C9326EC001FEE1F /* ios six week challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5478CE611C9326EC001FEE1F /* ios six week challenge */ = {
+			isa = PBXGroup;
+			children = (
+				5478CE621C9326EC001FEE1F /* AppDelegate.swift */,
+				5478CE641C9326EC001FEE1F /* ViewController.swift */,
+				5478CE661C9326EC001FEE1F /* Main.storyboard */,
+				5478CE691C9326EC001FEE1F /* Assets.xcassets */,
+				5478CE6B1C9326EC001FEE1F /* LaunchScreen.storyboard */,
+				5478CE6E1C9326EC001FEE1F /* Info.plist */,
+			);
+			path = "ios six week challenge";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5478CE5E1C9326EC001FEE1F /* ios six week challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5478CE711C9326EC001FEE1F /* Build configuration list for PBXNativeTarget "ios six week challenge" */;
+			buildPhases = (
+				5478CE5B1C9326EC001FEE1F /* Sources */,
+				5478CE5C1C9326EC001FEE1F /* Frameworks */,
+				5478CE5D1C9326EC001FEE1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios six week challenge";
+			productName = "ios six week challenge";
+			productReference = 5478CE5F1C9326EC001FEE1F /* ios six week challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5478CE571C9326EC001FEE1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Youcef;
+				TargetAttributes = {
+					5478CE5E1C9326EC001FEE1F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5478CE5A1C9326EC001FEE1F /* Build configuration list for PBXProject "ios six week challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5478CE561C9326EC001FEE1F;
+			productRefGroup = 5478CE601C9326EC001FEE1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5478CE5E1C9326EC001FEE1F /* ios six week challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5478CE5D1C9326EC001FEE1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5478CE6D1C9326EC001FEE1F /* LaunchScreen.storyboard in Resources */,
+				5478CE6A1C9326EC001FEE1F /* Assets.xcassets in Resources */,
+				5478CE681C9326EC001FEE1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5478CE5B1C9326EC001FEE1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5478CE651C9326EC001FEE1F /* ViewController.swift in Sources */,
+				5478CE631C9326EC001FEE1F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5478CE661C9326EC001FEE1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5478CE671C9326EC001FEE1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5478CE6B1C9326EC001FEE1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5478CE6C1C9326EC001FEE1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5478CE6F1C9326EC001FEE1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5478CE701C9326EC001FEE1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5478CE721C9326EC001FEE1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios six week challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "----------------com.sunnydaysolution.ios-six-week-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5478CE731C9326EC001FEE1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ios six week challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "----------------com.sunnydaysolution.ios-six-week-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5478CE5A1C9326EC001FEE1F /* Build configuration list for PBXProject "ios six week challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5478CE6F1C9326EC001FEE1F /* Debug */,
+				5478CE701C9326EC001FEE1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5478CE711C9326EC001FEE1F /* Build configuration list for PBXNativeTarget "ios six week challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5478CE721C9326EC001FEE1F /* Debug */,
+				5478CE731C9326EC001FEE1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5478CE571C9326EC001FEE1F /* Project object */;
+}
