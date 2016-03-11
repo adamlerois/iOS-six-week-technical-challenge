@@ -33,7 +33,7 @@ class PlayerController {
         
     }
     func loadFromPersistentStorage() {
-        let playerDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(playerskey) as? [String: AnyObject]
+        let playerDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(playerskey) as? [[String: AnyObject]]
         
         if let playerDictionaries = playerDictionariesFromDefaults {
             self.players = playerDictionaries.map({ (Players(dictionary: $0)!)})

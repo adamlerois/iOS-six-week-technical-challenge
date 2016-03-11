@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GyH-qw-tfB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="hh5-DZ-CzX">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem id="a1R-re-H4g">
@@ -27,15 +27,9 @@
                             </items>
                         </navigationBar>
                         <view key="tableFooterView" contentMode="scaleToFill" id="HwP-cT-Mmb">
-                            <rect key="frame" x="0.0" y="116" width="600" height="486"/>
+                            <rect key="frame" x="0.0" y="180" width="600" height="486"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-IR-jj4">
-                                    <rect key="frame" x="0.0" y="442" width="600" height="44"/>
-                                    <items>
-                                        <barButtonItem id="ucx-lO-dkS"/>
-                                    </items>
-                                </toolbar>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xw-uj-ac6">
                                     <rect key="frame" x="217" y="320" width="166" height="56"/>
                                     <color key="backgroundColor" red="1" green="0.42256597826542663" blue="0.20389363776971792" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,14 +55,12 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="1xw-uj-ac6" firstAttribute="centerX" secondItem="HwP-cT-Mmb" secondAttribute="centerX" id="2Ic-X6-ayj"/>
-                                <constraint firstItem="1xw-uj-ac6" firstAttribute="centerX" secondItem="rQL-IR-jj4" secondAttribute="centerX" id="9ah-YO-NND"/>
-                                <constraint firstItem="rQL-IR-jj4" firstAttribute="top" secondItem="1xw-uj-ac6" secondAttribute="bottom" constant="66" id="H5J-IP-vko"/>
                                 <constraint firstAttribute="bottom" secondItem="1xw-uj-ac6" secondAttribute="bottom" constant="110" id="kek-0Q-wrY"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="1rB-Nz-WsT" detailTextLabel="dAO-h9-UV2" style="IBUITableViewCellStyleSubtitle" id="V5W-q0-0bg">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V5W-q0-0bg" id="Ven-9S-SJK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -100,10 +92,11 @@
                             <outlet property="delegate" destination="Gh7-gr-Pcy" id="1bs-Gh-wU1"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="H7k-bw-IIy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhU-uH-yeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="460"/>
+            <point key="canvasLocation" x="1067" y="460"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="pjE-KJ-Yd8">
@@ -168,7 +161,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfB-Ui-8NJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="460"/>
+            <point key="canvasLocation" x="1733" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2E7-c3-nDD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GyH-qw-tfB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="anA-5Z-cfb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gh7-gr-Pcy" kind="relationship" relationship="rootViewController" id="tGq-Y4-4ZG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pg4-OF-T53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="460"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
