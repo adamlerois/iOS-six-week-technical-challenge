@@ -8,17 +8,35 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
+    var player: Players?
+    @IBOutlet weak var player2TextField: UITextField!
 
+    @IBOutlet weak var player1TextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func addButtonTapped(sender: AnyObject) {
+        if let player = self.player {
+            player.player1 = self.player1TextField.text!
+            player.player2 = self.player2TextField.text!
+        }else {
+            let newPlayer = Players(player1: self.player1TextField.text!, player2: self.player2TextField.text!)
+            PlayerController.sharedInstance.addPlayer(newPlayer)
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func update(player: Players) {
+        self.player1TextField.text = player.player1
+        self.player2TextField.text = player.player2
+        
     }
     
 
@@ -31,5 +49,8 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
