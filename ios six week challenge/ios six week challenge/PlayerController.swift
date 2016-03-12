@@ -7,13 +7,13 @@
 //
 
 import Foundation
-import GameKit
+
 class PlayerController {
     private let playerskey = "players"
     static let sharedInstance = PlayerController()
     var players: [Players]
     init() {
-        self.players = []
+        players = []
         self.loadFromPersistentStorage()
     }
     
@@ -26,31 +26,40 @@ class PlayerController {
 
     
 
-    func removePlayer(player: Players) {
-        if let playerIndex = players.indexOf(player) {
-            players.removeAtIndex(playerIndex)
-        }
+    func removePlayer(indexPath: NSIndexPath) {
+            players.removeAtIndex(indexPath.row)
+        
         
     }
     func loadFromPersistentStorage() {
-        let playerDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(playerskey) as? [[String: AnyObject]]
+        let unarchivedPlayer = NSKeyedUnarchiver.unarchiveObjectWithFile(self.filePath(playerskey))
         
-        if let playerDictionaries = playerDictionariesFromDefaults {
-            self.players = playerDictionaries.map({ (Players(dictionary: $0)!)})
-}
+  
 
 }
     
     func saveToPersistentStorage() {
-        let playerDictionaries = self.players.map({$0.dictionaryCopy()})
-        NSUserDefaults.standardUserDefaults().setObject(playerDictionaries, forKey: playerskey)
+        
+        NSKeyedArchiver.archiveRootObject(self.playerskey, toFile: self.filePath(playerskey))
     }
     
-   
-    
-    
+        func filePath(key : String) -> String{
+            
+            let directorySearchResults = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true)
+            
+            let Path: AnyObject = directorySearchResults[0]
+            
+            let playerPath = Path.stringByAppendingString("/\(key).plist")
+            
+            return playerPath
+            
+        }
+        
+        
+        
     
 }
+
 extension MutableCollectionType where Index == Int {
     /// Shuffle the elements of `self` in-place.
     mutating func shuffleInPlace() {

@@ -73,9 +73,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ZyL-Ay-Xyl" kind="show" identifier="showPlayer" id="2EB-Ms-qDT"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -182,7 +179,4 @@
             <point key="canvasLocation" x="-113" y="444"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nFc-LJ-cYr"/>
-    </inferredMetricsTieBreakers>
 </document>

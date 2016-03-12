@@ -8,11 +8,10 @@
 
 import UIKit
 class ListTableViewController: UITableViewController {
-    var player: [Players] = PlayerController.sharedInstance.players
 
     @IBAction func shuffleButtonTapped(sender: UIButton) {
         
-        player.shuffleInPlace()
+        PlayerController.sharedInstance.players.shuffleInPlace()
         self.tableView.reloadData()
     }
     override func viewDidLoad() {
@@ -25,7 +24,6 @@ class ListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         tableView.reloadData()
     }
 
@@ -35,17 +33,19 @@ class ListTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-   
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return player.count
+        return PlayerController.sharedInstance.players.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier", forIndexPath: indexPath)
-let play = player[indexPath.row]
+        let play = PlayerController.sharedInstance.players[indexPath.row]
         cell.textLabel?.text = play.player1
         cell.detailTextLabel?.text = play.player2
         return cell
@@ -53,28 +53,28 @@ let play = player[indexPath.row]
     
 
     
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        let play = player[indexPath.row]
-        
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+//    // Override to support conditional editing of the table view.
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        let play = player[indexPath.row]
+//        
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
     
 
     
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-             let play = player[indexPath.row]
-            PlayerController.sharedInstance.removePlayer(play)
-            // Delete the row from the data source
-            
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-           
-    }
-    }
-    
+//    // Override to support editing the table view.
+//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//             let play = player[indexPath.row]
+//            PlayerController.sharedInstance.removePlayer(play)
+//            // Delete the row from the data source
+//            
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//           
+//    }
+//    }
+//    
 
     /*
     // Override to support rearranging the table view.
@@ -94,29 +94,29 @@ let play = player[indexPath.row]
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showPlayer" {
-            if let destination = segue.destinationViewController as? MainViewController {
-                _ = destination.view
-                
-                let indexPath = tableView.indexPathForSelectedRow
-                if let selectedRow = indexPath?.row{
-                 let play = player[selectedRow]
-                    destination.update(play)
-                
-                }
-                
-                
-                
-                
-                
-                
-                
-            }
-        }
-    }
-    
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showPlayer" {
+//            if let destination = segue.destinationViewController as? MainViewController {
+//                _ = destination.view
+//                
+//                let indexPath = tableView.indexPathForSelectedRow
+//                if let selectedRow = indexPath?.row{
+//                 let play = player[selectedRow]
+//                    destination.update(play)
+//                
+//                }
+//                
+//                
+//                
+//                
+//                
+//                
+//                
+//            }
+//        }
+//    }
+//    
     
 
 }

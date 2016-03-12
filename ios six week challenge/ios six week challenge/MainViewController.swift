@@ -8,8 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
-    var player: Players?
+class MainViewController: UIViewController {
     @IBOutlet weak var player2TextField: UITextField!
 
     @IBOutlet weak var player1TextField: UITextField!
@@ -20,24 +19,21 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addButtonTapped(sender: AnyObject) {
-        if let player = self.player {
-            player.player1 = self.player1TextField.text!
-            player.player2 = self.player2TextField.text!
-        }else {
+        
             let newPlayer = Players(player1: self.player1TextField.text!, player2: self.player2TextField.text!)
             PlayerController.sharedInstance.addPlayer(newPlayer)
-        }
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func update(player: Players) {
-        self.player1TextField.text = player.player1
-        self.player2TextField.text = player.player2
-        
-    }
+//    func update(player: Players) {
+//        self.player1TextField.text = player.player1
+//        self.player2TextField.text = player.player2
+//        
+//    }
     
 
     /*
