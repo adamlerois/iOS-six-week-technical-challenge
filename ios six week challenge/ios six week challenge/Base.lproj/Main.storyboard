@@ -16,26 +16,17 @@
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="hh5-DZ-CzX">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem id="a1R-re-H4g">
-                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="9UX-EL-RRs">
-                                        <connections>
-                                            <segue destination="ZyL-Ay-Xyl" kind="show" identifier="addPlayer" id="Lky-F3-RKZ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
                         </navigationBar>
                         <view key="tableFooterView" contentMode="scaleToFill" id="HwP-cT-Mmb">
                             <rect key="frame" x="0.0" y="180" width="600" height="486"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xw-uj-ac6">
-                                    <rect key="frame" x="217" y="320" width="166" height="56"/>
-                                    <color key="backgroundColor" red="1" green="0.42256597826542663" blue="0.20389363776971792" alpha="1" colorSpace="calibratedRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfk-lt-ZsG">
+                                    <rect key="frame" x="160" y="224" width="280" height="38"/>
+                                    <color key="backgroundColor" red="1" green="0.42256597829999998" blue="0.2038936378" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="166" id="9vr-Xd-9fM"/>
-                                        <constraint firstAttribute="height" constant="56" id="QeM-5S-Yav"/>
+                                        <constraint firstAttribute="height" constant="38" id="5iT-gB-a4U"/>
+                                        <constraint firstAttribute="width" constant="280" id="dk0-Au-RFy"/>
                                     </constraints>
                                     <state key="normal">
                                         <attributedString key="attributedTitle">
@@ -48,14 +39,14 @@
                                         </attributedString>
                                     </state>
                                     <connections>
-                                        <action selector="shuffleButtonTapped:" destination="Gh7-gr-Pcy" eventType="touchUpInside" id="5Dp-VW-3LE"/>
+                                        <action selector="shuffleButtonTapped:" destination="Gh7-gr-Pcy" eventType="touchUpInside" id="kHK-VJ-fBn"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="1xw-uj-ac6" firstAttribute="centerX" secondItem="HwP-cT-Mmb" secondAttribute="centerX" id="2Ic-X6-ayj"/>
-                                <constraint firstAttribute="bottom" secondItem="1xw-uj-ac6" secondAttribute="bottom" constant="110" id="kek-0Q-wrY"/>
+                                <constraint firstItem="xfk-lt-ZsG" firstAttribute="centerY" secondItem="HwP-cT-Mmb" secondAttribute="centerY" id="50K-Sr-nnW"/>
+                                <constraint firstItem="xfk-lt-ZsG" firstAttribute="centerX" secondItem="HwP-cT-Mmb" secondAttribute="centerX" id="pUe-M1-V4T"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -70,14 +61,14 @@
                                             <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dAO-h9-UV2">
                                             <rect key="frame" x="15" y="25" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -92,11 +83,20 @@
                             <outlet property="delegate" destination="Gh7-gr-Pcy" id="1bs-Gh-wU1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="H7k-bw-IIy"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="H7k-bw-IIy">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rzr-yx-3W2">
+                            <connections>
+                                <segue destination="ZyL-Ay-Xyl" kind="show" identifier="showPlayer" id="nFc-LJ-cYr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhU-uH-yeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1067" y="460"/>
+            <point key="canvasLocation" x="794" y="425"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="pjE-KJ-Yd8">
@@ -179,10 +179,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pg4-OF-T53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="460"/>
+            <point key="canvasLocation" x="-113" y="444"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2EB-Ms-qDT"/>
+        <segue reference="nFc-LJ-cYr"/>
     </inferredMetricsTieBreakers>
 </document>

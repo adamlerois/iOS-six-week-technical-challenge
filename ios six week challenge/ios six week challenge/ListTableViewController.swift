@@ -7,15 +7,13 @@
 //
 
 import UIKit
-
-
 class ListTableViewController: UITableViewController {
-    var player: [Players] = []
+    var player: [Players] = PlayerController.sharedInstance.players
 
     @IBAction func shuffleButtonTapped(sender: UIButton) {
         
-        PlayerController.sharedInstance.randomizer()
-        
+        player.shuffleInPlace()
+        self.tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,15 +39,15 @@ class ListTableViewController: UITableViewController {
    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PlayerController.sharedInstance.players.count
+        return player.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier", forIndexPath: indexPath)
-let player = PlayerController.sharedInstance.players[indexPath.row]
-        cell.textLabel?.text = player.player1
-        cell.detailTextLabel?.text = player.player2
+let play = player[indexPath.row]
+        cell.textLabel?.text = play.player1
+        cell.detailTextLabel?.text = play.player2
         return cell
     }
     
@@ -57,7 +55,7 @@ let player = PlayerController.sharedInstance.players[indexPath.row]
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        let player = PlayerController.sharedInstance.players[indexPath.row]
+        let play = player[indexPath.row]
         
         // Return false if you do not want the specified item to be editable.
         return true
@@ -68,8 +66,8 @@ let player = PlayerController.sharedInstance.players[indexPath.row]
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-             let player = PlayerController.sharedInstance.players[indexPath.row]
-            PlayerController.sharedInstance.removePlayer(player)
+             let play = player[indexPath.row]
+            PlayerController.sharedInstance.removePlayer(play)
             // Delete the row from the data source
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -104,8 +102,8 @@ let player = PlayerController.sharedInstance.players[indexPath.row]
                 
                 let indexPath = tableView.indexPathForSelectedRow
                 if let selectedRow = indexPath?.row{
-                 let player = PlayerController.sharedInstance.players[selectedRow]
-                    destination.update(player)
+                 let play = player[selectedRow]
+                    destination.update(play)
                 
                 }
                 
