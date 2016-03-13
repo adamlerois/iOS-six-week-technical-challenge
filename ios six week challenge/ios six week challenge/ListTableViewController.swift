@@ -63,18 +63,20 @@ class ListTableViewController: UITableViewController {
     
 
     
-//    // Override to support editing the table view.
-//    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//             let play = player[indexPath.row]
-//            PlayerController.sharedInstance.removePlayer(play)
-//            // Delete the row from the data source
-//            
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-//           
-//    }
-//    }
-//    
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+             let play = PlayerController.sharedInstance.players[indexPath.row]
+            
+            PlayerController.sharedInstance.players.removeAtIndex(indexPath.row)
+            
+            // Delete the row from the data source
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+           
+    }
+    }
+    
 
     /*
     // Override to support rearranging the table view.
